@@ -1,57 +1,82 @@
-/* Header transparent initially, then luxury maroon/cherry on scroll */
+/* Header and Footer Luxury Borders and Rounded Styling */
+
+/* Header Base Styling */
+header#siteHeader {
+  border-bottom: 1px solid rgba(73, 18, 17, 0.15) !important; /* Maroon border initially on light pages */
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Header when transparent at top */
 .header-transparent {
   background-color: transparent !important;
-  border-bottom-color: transparent !important;
+  border-bottom-color: rgba(255, 255, 255, 0.25) !important; /* Crisp white border over dark hero */
 }
 
+/* Header when scrolled solid maroon */
 .header-scrolled {
-  background-color: rgba(73, 18, 17, 0.96) !important; /* Brand Maroon / Black Cherry */
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border-bottom: 1px solid rgba(132, 121, 73, 0.3) !important;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3) !important;
+  background-color: rgba(73, 18, 17, 0.98) !important; /* Solid Rich Maroon */
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35) !important; /* Crisp white divider border */
+  box-shadow: 0 12px 32px -10px rgba(0, 0, 0, 0.35) !important;
 }
 
-/* Logo color transition: clean light ivory initially, then creamy linen or white on maroon */
-.header-transparent #brandLogo .logo-title {
-  color: #491211 !important; /* Maroon on light pages */
-}
-/* If over dark hero (home page), we can ensure high visibility */
-.hero-page .header-transparent #brandLogo .logo-title {
-  color: #FAFAF7 !important;
-}
-.hero-page .header-transparent #brandLogo .logo-sub {
-  color: #D2CCBC !important;
-}
-.hero-page .header-transparent nav a {
-  color: #FAFAF7 !important;
-}
-
-/* Scrolled state: pristine text contrast on Maroon bar */
+/* Scrolled contrast states */
 .header-scrolled #brandLogo .logo-title {
-  color: #F7F3EE !important;
+  color: #FAFAF7 !important;
 }
 .header-scrolled #brandLogo .logo-sub {
   color: #D2CCBC !important;
 }
 .header-scrolled nav a {
-  color: #F7F3EE !important;
+  color: #FAFAF7 !important;
 }
 .header-scrolled nav a:hover {
   color: #D2CCBC !important;
 }
 .header-scrolled button#mobileMenuBtn {
-  color: #F7F3EE !important;
+  color: #FAFAF7 !important;
 }
 
-/* Inquire Now Button: turns crisp white with maroon text when header is scrolled */
+/* Inquire Now CTA Button: pill rounded with contrast flip */
+.header-cta-btn {
+  border-radius: 9999px !important;
+  border: 1px solid transparent !important;
+  transition: all 0.3s ease !important;
+}
+
 .header-scrolled .header-cta-btn {
   background-color: #FAFAF7 !important;
   color: #491211 !important;
-  border-color: #FAFAF7 !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
 }
+
 .header-scrolled .header-cta-btn:hover {
   background-color: #D2CCBC !important;
   color: #360C0B !important;
+}
+
+/* Footer Luxury Border */
+footer {
+  border-top: 2px solid rgba(255, 255, 255, 0.2) !important; /* White border on maroon footer */
+}
+
+/* All CTA buttons rounded borders */
+a[href*="inquire"], button[type="submit"], .filter-btn {
+  border-radius: 9999px !important;
+}
+
+/* Card images rounded corners */
+.gallery-item, .aspect-portrait, .aspect-video {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+article {
+  border-radius: 16px !important;
+}
+
+.bg-brand-linenLight.p-8, .bg-brand-cherry.p-8 {
+  border-radius: 16px !important;
 }
