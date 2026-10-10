@@ -1,0 +1,77 @@
+/* Vera Range Luxury Motion & Editorial Animations */
+
+/* Smooth scroll & base easing variables */
+:root {
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Subtle page transition fade */
+body {
+  opacity: 0;
+  transition: opacity 0.6s var(--ease-smooth);
+}
+body.page-loaded {
+  opacity: 1;
+}
+
+/* Reveal on scroll base state */
+.motion-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s var(--ease-editorial), transform 0.9s var(--ease-editorial);
+  will-change: opacity, transform;
+}
+
+.motion-reveal.motion-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay helpers for grids and lists */
+.motion-delay-100 { transition-delay: 100ms; }
+.motion-delay-200 { transition-delay: 200ms; }
+.motion-delay-300 { transition-delay: 300ms; }
+.motion-delay-400 { transition-delay: 400ms; }
+
+/* Scale reveal for images (Tim Tadder style) */
+.motion-scale {
+  opacity: 0;
+  transform: scale(0.96) translateY(20px);
+  transition: opacity 1.1s var(--ease-editorial), transform 1.1s var(--ease-editorial);
+}
+
+.motion-scale.motion-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Hero Zoom cinematic effect */
+.hero-zoom {
+  animation: heroCinematic 22s infinite alternate var(--ease-smooth);
+}
+
+@keyframes heroCinematic {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+/* Luxury magnetic / floating hover for cards & buttons */
+.editorial-hover {
+  transition: transform 0.5s var(--ease-editorial), box-shadow 0.5s var(--ease-editorial);
+}
+
+.editorial-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px rgba(73, 18, 17, 0.15);
+}
+
+/* Soft floating pulse for widgets */
+@keyframes softFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.floating-widget {
+  animation: softFloat 4s ease-in-out infinite;
+}
