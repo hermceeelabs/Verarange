@@ -3,7 +3,6 @@
 /* Header Base */
 header#siteHeader {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  border-radius: 0 !important; /* Square edge edge-to-edge: eliminates white corner gaps */
 }
 
 /* Header when transparent at top */
@@ -11,6 +10,7 @@ header#siteHeader {
   background-color: transparent !important;
   background: transparent !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 0 !important;
 }
 
 /* Header when scrolled solid Maroon */
@@ -20,7 +20,10 @@ header#siteHeader {
   -webkit-backdrop-filter: blur(14px) !important;
   border-bottom: 2px solid rgba(250, 250, 247, 0.9) !important;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.35) !important;
-  border-radius: 0 !important;
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
 }
 
 /* Scrolled contrast states: works on ALL pages regardless of ID */
@@ -71,18 +74,21 @@ header#siteHeader {
   color: #360C0B !important;
 }
 
-/* Footer: Full Width Edge-to-Edge with Crisp Subtle Border */
+/* Footer: Full Width Edge-to-Edge with Rounded Top Corners & Crisp Border */
 footer {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
   background-color: #491211 !important; /* Brand Deep Maroon */
-  border-radius: 0 !important; /* Full width edge-to-edge */
-  border-top: 1px solid rgba(250, 250, 247, 0.25) !important;
+  border-top-left-radius: 24px !important; /* Soft luxury rounded top corners */
+  border-top-right-radius: 24px !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-top: 1.5px solid rgba(250, 250, 247, 0.3) !important;
   border-left: none !important;
   border-right: none !important;
   border-bottom: none !important;
-  box-shadow: 0 -4px 20px rgba(45, 11, 11, 0.15) !important;
+  box-shadow: 0 -8px 24px rgba(45, 11, 11, 0.18) !important;
 }
 
 @media (min-width: 1024px) {
@@ -90,6 +96,8 @@ footer {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
+    border-top-left-radius: 28px !important;
+    border-top-right-radius: 28px !important;
   }
 }
 
