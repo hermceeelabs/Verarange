@@ -55,4 +55,55 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', updateHeaderState, { passive: true });
     updateHeaderState(); // Check initial position
   }
+
+  // Dynamic Image Crossfade Slider on Homepage Gallery Cards
+  const galleryCards = document.querySelectorAll('.gallery-card');
+  galleryCards.forEach((card, cardIndex) => {
+    const slides = card.querySelectorAll('.slide-img');
+    const dots = card.querySelectorAll('.slide-dot');
+    if (slides.length <= 1) return;
+
+    let currentIndex = 0;
+    let autoInterval = null;
+
+    const showSlide = (nextIndex) => {
+      slides[currentIndex].classList.remove('active');
+      slides[currentIndex].style.opacity = '0';
+      dots[currentIndex].classList.remove('bg-white');
+      dots[currentIndex].classList.add('bg-white/40');
+
+      currentIndex = nextIndex;
+
+      slides[currentIndex].classList.add('active');
+      slides[currentIndex].style.opacity = '1';
+      dots[currentIndex].classList.add('bg-white');
+      dots[currentIndex].classList.remove('bg-white/40');
+    };
+
+    // Staggered autoplay so cards don't all flip at the exact same millisecond
+    const startCycle = () => {
+      autoInterval = setInterval(() => {
+        const next = (currentIndex + 1) % slides.length;
+        showSlide(next);
+      }, 3400 + (cardIndex * 800)); // Organic offset
+    };
+
+    const stopCycle = () => {
+      if (autoInterval) clearInterval(autoInterval);
+    };
+
+    // Start auto cycle
+    startCycle();
+
+    // Fast-cycle / interactive advance on hover
+    card.addEventListener('mouseenter', () => {
+      stopCycle();
+      const next = (currentIndex + 1) % slides.length;
+      showSlide(next);
+    });
+
+    card.addEventListener('mouseleave', () => {
+      startCycle();
+    });
+  });
 });

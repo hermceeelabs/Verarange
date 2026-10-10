@@ -182,7 +182,7 @@
     </div>
   </section>
 
-  <!-- FEATURED PORTFOLIO HIGHLIGHT (Tim Tadder Style Cinematic Grid) -->
+  <!-- FEATURED PORTFOLIO HIGHLIGHT (Tim Tadder Style Dynamic Cycling Cards) -->
   <section class="py-24 bg-white motion-reveal">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-gray-200">
@@ -197,35 +197,76 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <a href="portfolio.html?filter=weddings" class="group relative overflow-hidden bg-brand-linen block aspect-[3/4]">
-          <img src="https://static.showit.com/1200/nAoW5Z9Yj_DLo0fom7lEGQ/339870/g0a1071.jpg" alt="Western Weddings by Vera Range" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end text-white">
-            <span class="text-brand-linen text-[10px] tracking-ultra uppercase font-semibold">Weddings</span>
+        
+        <!-- Card 1: Western Weddings (Cycles through original wedding shots) -->
+        <a href="portfolio.html?filter=weddings" class="gallery-card group relative overflow-hidden bg-brand-linen block aspect-[3/4] rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500" data-gallery="weddings">
+          <div class="slides-container absolute inset-0">
+            <img src="https://static.showit.com/1200/nAoW5Z9Yj_DLo0fom7lEGQ/339870/g0a1071.jpg" alt="Western Weddings" class="slide-img active absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out group-hover:scale-105" />
+            <img src="https://static.showit.com/1200/eQVRQS7Ajan-5LEgOF3_Tw/339870/g0a0156.jpg" alt="Sunset Ceremony" class="slide-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out group-hover:scale-105 opacity-0" />
+            <img src="https://static.showit.com/1200/JEcWGXqOlLdiKECHXEMYeQ/339870/g0a7115.jpg" alt="Wedding Details" class="slide-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out group-hover:scale-105 opacity-0" />
+            <img src="https://static.showit.com/1200/0yVQ4o2WTuAoh7PLcf4_xA/339870/g0a0180.jpg" alt="Reception Moments" class="slide-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out group-hover:scale-105 opacity-0" />
+          </div>
+          <!-- Indicator Dots -->
+          <div class="absolute top-6 right-6 z-20 flex gap-1.5 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full">
+            <span class="slide-dot w-1.5 h-1.5 rounded-full bg-white transition-all"></span>
+            <span class="slide-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"></span>
+            <span class="slide-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"></span>
+            <span class="slide-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"></span>
+          </div>
+          <!-- Overlay Info -->
+          <div class="absolute inset-0 z-10 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-8 flex flex-col justify-end text-white">
+            <span class="text-brand-linen text-[10px] tracking-ultra uppercase font-semibold">Western Weddings</span>
             <h3 class="font-serif text-3xl font-light">Cherished Traditions</h3>
-            <p class="text-white/80 text-xs mt-1 text-justify">Full-day luxury celebrations &rarr;</p>
+            <p class="text-white/80 text-xs mt-1 text-justify">Grand ceremonies, intimate vows &amp; heirloom heirlooms &rarr;</p>
           </div>
         </a>
 
-        <!-- Card 2 -->
-        <a href="portfolio.html?filter=couples" class="group relative overflow-hidden bg-brand-linen block aspect-[3/4]">
-          <img src="https://static.showit.com/1200/dcskXyE-x0GWp-JDJuKLOA/339870/img_3720.jpg" alt="Couples & Ranch Lifestyle Photography" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end text-white">
+        <!-- Card 2: Couples & Engagements (Cycles through original ranch lifestyle shots) -->
+        <a href="portfolio.html?filter=couples" class="gallery-card group relative overflow-hidden bg-brand-linen block aspect-[3/4] rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500" data-gallery="couples">
+          <div class="slides-container absolute inset-0">
+            <img src="https://static.showit.com/1200/dcskXyE-x0GWp-JDJuKLOA/339870/img_3720.jpg" alt="Ranch Romance" class="slide-img active absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out group-hover:scale-105" />
+            <img src="https://static.showit.com/1200/x1me3MZvQrWhCdlVKa6ijA/339870/g0a4177.jpg" alt="Golden Hour Fields" class="slide-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out group-hover:scale-105 opacity-0" />
+            <img src="https://static.showit.com/1200/74PFY8vFcTs4hLTTY5nyCg/339870/g0a1528.jpg" alt="Candid Joy" class="slide-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out group-hover:scale-105 opacity-0" />
+            <img src="https://static.showit.com/1200/GgzFJ-omniwOaqi_358SZQ/339870/img_3745.jpg" alt="Equestrian Couples" class="slide-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out group-hover:scale-105 opacity-0" />
+          </div>
+          <!-- Indicator Dots -->
+          <div class="absolute top-6 right-6 z-20 flex gap-1.5 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full">
+            <span class="slide-dot w-1.5 h-1.5 rounded-full bg-white transition-all"></span>
+            <span class="slide-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"></span>
+            <span class="slide-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"></span>
+            <span class="slide-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"></span>
+          </div>
+          <!-- Overlay Info -->
+          <div class="absolute inset-0 z-10 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-8 flex flex-col justify-end text-white">
             <span class="text-brand-linen text-[10px] tracking-ultra uppercase font-semibold">Couples &amp; Engagements</span>
             <h3 class="font-serif text-3xl font-light">Ranch Romance</h3>
-            <p class="text-white/80 text-xs mt-1 text-justify">Honest connection under wide skies &rarr;</p>
+            <p class="text-white/80 text-xs mt-1 text-justify">Golden hour connection under wide Midwestern skies &rarr;</p>
           </div>
         </a>
 
-        <!-- Card 3 -->
-        <a href="portfolio.html?filter=seniors" class="group relative overflow-hidden bg-brand-linen block aspect-[3/4]">
-          <img src="https://static.showit.com/1200/_zaM1efNmTFmyLov0_kocQ/339870/g0a0144.jpg" alt="Senior Editorial Portraits" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end text-white">
+        <!-- Card 3: Seniors & Editorial (Cycles through original portrait sessions) -->
+        <a href="portfolio.html?filter=seniors" class="gallery-card group relative overflow-hidden bg-brand-linen block aspect-[3/4] rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500" data-gallery="seniors">
+          <div class="slides-container absolute inset-0">
+            <img src="https://static.showit.com/1200/_zaM1efNmTFmyLov0_kocQ/339870/g0a0144.jpg" alt="Editorial Seniors" class="slide-img active absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out group-hover:scale-105" />
+            <img src="https://static.showit.com/1200/yJ2Ll6X9i6CFIbxlIsC1gw/339870/img_8444.jpg" alt="Warm Outdoor Portraits" class="slide-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out group-hover:scale-105 opacity-0" />
+            <img src="https://static.showit.com/1200/VTWFn16EY8xizAeRVxb6eA/339870/img_1174.jpg" alt="High Fashion Heritage" class="slide-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out group-hover:scale-105 opacity-0" />
+            <img src="https://static.showit.com/1200/Mgg_CdcsmpVDuxHYMHj5ug/339870/g0a1267.jpg" alt="Graduation Milestones" class="slide-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out group-hover:scale-105 opacity-0" />
+          </div>
+          <!-- Indicator Dots -->
+          <div class="absolute top-6 right-6 z-20 flex gap-1.5 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full">
+            <span class="slide-dot w-1.5 h-1.5 rounded-full bg-white transition-all"></span>
+            <span class="slide-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"></span>
+            <span class="slide-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"></span>
+            <span class="slide-dot w-1.5 h-1.5 rounded-full bg-white/40 transition-all"></span>
+          </div>
+          <!-- Overlay Info -->
+          <div class="absolute inset-0 z-10 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-8 flex flex-col justify-end text-white">
             <span class="text-brand-linen text-[10px] tracking-ultra uppercase font-semibold">Seniors &amp; Portraits</span>
             <h3 class="font-serif text-3xl font-light">Editorial Heritage</h3>
-            <p class="text-white/80 text-xs mt-1 text-justify">Western-inspired portrait sessions &rarr;</p>
+            <p class="text-white/80 text-xs mt-1 text-justify">Western flair, natural radiance &amp; authentic milestones &rarr;</p>
           </div>
         </a>
+
       </div>
     </div>
   </section>
