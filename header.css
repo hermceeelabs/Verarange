@@ -3,22 +3,24 @@
 /* Header Base */
 header#siteHeader {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  border-radius: 0 0 12px 12px !important; /* Subtle rounding on bottom of header */
+  border-radius: 0 !important; /* Square edge edge-to-edge: eliminates white corner gaps */
 }
 
-/* Header when transparent or over light/white backgrounds: Maroon border */
+/* Header when transparent at top */
 .header-transparent {
   background-color: transparent !important;
-  border-bottom: 2px solid #491211 !important; /* Maroon border when header background is light/transparent */
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
-/* Header when scrolled solid Maroon: Crisp White border */
+/* Header when scrolled solid Maroon */
 .header-scrolled {
   background-color: rgba(73, 18, 17, 0.98) !important; /* Solid Rich Maroon */
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
-  border-bottom: 2px solid rgba(250, 250, 247, 0.9) !important; /* White border when header is Maroon */
+  border-bottom: 2px solid rgba(250, 250, 247, 0.9) !important;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.35) !important;
+  border-radius: 0 !important;
 }
 
 /* Scrolled contrast states */
