@@ -80,8 +80,8 @@ footer {
   max-width: 100% !important;
   margin: 0 !important;
   background-color: #491211 !important; /* Brand Deep Maroon */
-  border-top-left-radius: 24px !important; /* Soft luxury rounded top corners */
-  border-top-right-radius: 24px !important;
+  border-top-left-radius: 28px !important; /* Soft luxury rounded top corners */
+  border-top-right-radius: 28px !important;
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
   border-top: 1.5px solid rgba(250, 250, 247, 0.3) !important;
@@ -96,8 +96,8 @@ footer {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
-    border-top-left-radius: 28px !important;
-    border-top-right-radius: 28px !important;
+    border-top-left-radius: 32px !important;
+    border-top-right-radius: 32px !important;
   }
 }
 
