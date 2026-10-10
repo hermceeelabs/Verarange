@@ -124,6 +124,21 @@ h1.font-serif, h2.font-serif {
   overflow: hidden !important;
 }
 
+/* Journal & Stories Cards: Decorative Maroon Framing */
+article, .blog-card {
+  border: 2px solid #491211 !important; /* Maroon border framing */
+  border-radius: 16px !important; /* Subtle rounded corners */
+  background-color: #FAFAF7 !important;
+  box-shadow: 0 10px 25px -8px rgba(73, 18, 17, 0.12) !important;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease !important;
+}
+
+article:hover, .blog-card:hover {
+  border-color: #847949 !important; /* Shifts to Vintage Olive on hover */
+  transform: translateY(-4px) !important;
+  box-shadow: 0 18px 36px -10px rgba(73, 18, 17, 0.22) !important;
+}
+
 /* General CTA buttons rounding */
 a[href*="inquire"], button[type="submit"], .filter-btn {
   border-radius: 9999px !important;
