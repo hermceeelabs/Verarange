@@ -106,4 +106,19 @@ document.addEventListener('DOMContentLoaded', () => {
       startCycle();
     });
   });
+
+  // Hero Living Image Sequence (Ken Burns Crossfade Loop)
+  const heroSlides = document.querySelectorAll('.hero-slider-wrap .hero-slide');
+  if (heroSlides.length > 1) {
+    let heroIndex = 0;
+    setInterval(() => {
+      heroSlides[heroIndex].classList.remove('active');
+      heroSlides[heroIndex].style.opacity = '0';
+
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+
+      heroSlides[heroIndex].classList.add('active');
+      heroSlides[heroIndex].style.opacity = '1';
+    }, 6000); // Crossfades gracefully every 6 seconds
+  }
 });

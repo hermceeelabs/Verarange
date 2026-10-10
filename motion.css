@@ -46,14 +46,30 @@ body.page-loaded {
   transform: scale(1) translateY(0);
 }
 
-/* Hero Zoom cinematic effect */
-.hero-zoom {
-  animation: heroCinematic 22s infinite alternate var(--ease-smooth);
+/* Hero Ken Burns Cinematic Animations */
+.hero-kenburns-1 {
+  animation: kenBurnsZoomIn 14s infinite alternate ease-in-out;
+}
+.hero-kenburns-2 {
+  animation: kenBurnsPanRight 14s infinite alternate ease-in-out;
+}
+.hero-kenburns-3 {
+  animation: kenBurnsZoomOut 14s infinite alternate ease-in-out;
 }
 
-@keyframes heroCinematic {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.08); }
+@keyframes kenBurnsZoomIn {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.12) translate(-1%, -1%); }
+}
+
+@keyframes kenBurnsPanRight {
+  0% { transform: scale(1.08) translate(-2%, 0); }
+  100% { transform: scale(1.14) translate(2%, -1%); }
+}
+
+@keyframes kenBurnsZoomOut {
+  0% { transform: scale(1.14) translate(1%, 1%); }
+  100% { transform: scale(1.02) translate(0, 0); }
 }
 
 /* Luxury magnetic / floating hover for cards & buttons */
