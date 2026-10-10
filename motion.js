@@ -37,35 +37,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // Active scroll detector: Transparent when idle/not scrolling, solid maroon during active scroll
+  // Header scroll behavior:
+  // - When at the very top (scrollY <= 50): transparent
+  // - Once scrolled down (scrollY > 50): solid maroon background, with white Inquire button
   const header = document.getElementById('siteHeader');
   if (header) {
-    let scrollTimer = null;
-
-    const setHeaderSolid = () => {
-      header.classList.remove('header-transparent');
-      header.classList.add('header-scrolled');
-    };
-
-    const setHeaderTransparent = () => {
-      header.classList.remove('header-scrolled');
-      header.classList.add('header-transparent');
-    };
-
-    // Ensure it starts transparent
-    setHeaderTransparent();
-
-    window.addEventListener('scroll', () => {
-      // While scrolling, make it solid maroon
-      setHeaderSolid();
-
-      // Reset timer: when scrolling stops for 1.2s, smoothly return to transparent
-      if (scrollTimer !== null) {
-        clearTimeout(scrollTimer);
+    const updateHeaderState = () => {
+      if (window.scrollY > 50) {
+        header.classList.remove('header-transparent');
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+        header.classList.add('header-transparent');
       }
-      scrollTimer = setTimeout(() => {
-        setHeaderTransparent();
-      }, 1200);
-    }, { passive: true });
+    };
+
+    window.addEventListener('scroll', updateHeaderState, { passive: true });
+    updateHeaderState(); // Check initial position
   }
 });

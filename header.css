@@ -43,3 +43,15 @@
 .header-scrolled button#mobileMenuBtn {
   color: #F7F3EE !important;
 }
+
+/* Inquire Now Button: turns crisp white with maroon text when header is scrolled */
+.header-scrolled .header-cta-btn {
+  background-color: #FAFAF7 !important;
+  color: #491211 !important;
+  border-color: #FAFAF7 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+}
+.header-scrolled .header-cta-btn:hover {
+  background-color: #D2CCBC !important;
+  color: #360C0B !important;
+}
