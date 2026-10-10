@@ -23,22 +23,33 @@ header#siteHeader {
   border-radius: 0 !important;
 }
 
-/* Scrolled contrast states */
-.header-scrolled #brandLogo .logo-title {
+/* Scrolled contrast states: works on ALL pages regardless of ID */
+.header-scrolled .logo-title,
+.header-scrolled #brandLogo .logo-title,
+.header-scrolled a span.logo-title {
   color: #FAFAF7 !important;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35) !important;
 }
-.header-scrolled #brandLogo .logo-sub {
+
+.header-scrolled .logo-sub,
+.header-scrolled #brandLogo .logo-sub,
+.header-scrolled a span.logo-sub {
   color: #D2CCBC !important;
 }
+
 .header-scrolled nav a {
   color: #FAFAF7 !important;
 }
+
 .header-scrolled nav a:hover {
   color: #D2CCBC !important;
 }
-.header-scrolled button#mobileMenuBtn {
+
+.header-scrolled button#mobileMenuBtn,
+.header-scrolled button#mobileMenuBtn i,
+.header-scrolled button#mobileMenuBtn svg {
   color: #FAFAF7 !important;
+  stroke: #FAFAF7 !important;
 }
 
 /* Inquire Now CTA Button: pill rounded with contrast flip */
