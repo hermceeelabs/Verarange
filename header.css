@@ -1,0 +1,45 @@
+/* Header transparent initially, then luxury maroon/cherry on scroll */
+.header-transparent {
+  background-color: transparent !important;
+  border-bottom-color: transparent !important;
+}
+
+.header-scrolled {
+  background-color: rgba(73, 18, 17, 0.96) !important; /* Brand Maroon / Black Cherry */
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(132, 121, 73, 0.3) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Logo color transition: clean light ivory initially, then creamy linen or white on maroon */
+.header-transparent #brandLogo .logo-title {
+  color: #491211 !important; /* Maroon on light pages */
+}
+/* If over dark hero (home page), we can ensure high visibility */
+.hero-page .header-transparent #brandLogo .logo-title {
+  color: #FAFAF7 !important;
+}
+.hero-page .header-transparent #brandLogo .logo-sub {
+  color: #D2CCBC !important;
+}
+.hero-page .header-transparent nav a {
+  color: #FAFAF7 !important;
+}
+
+/* Scrolled state: pristine text contrast on Maroon bar */
+.header-scrolled #brandLogo .logo-title {
+  color: #F7F3EE !important;
+}
+.header-scrolled #brandLogo .logo-sub {
+  color: #D2CCBC !important;
+}
+.header-scrolled nav a {
+  color: #F7F3EE !important;
+}
+.header-scrolled nav a:hover {
+  color: #D2CCBC !important;
+}
+.header-scrolled button#mobileMenuBtn {
+  color: #F7F3EE !important;
+}

@@ -36,4 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, { passive: true });
   }
+
+  // Header transparency & Maroon scroll transition
+  const header = document.getElementById('siteHeader');
+  if (header) {
+    const handleScroll = () => {
+      if (window.scrollY > 40) {
+        header.classList.remove('header-transparent');
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+        header.classList.add('header-transparent');
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Trigger on load
+  }
 });
