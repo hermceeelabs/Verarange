@@ -3,6 +3,10 @@
  * Lightweight, high-performance IntersectionObserver animation driver
  */
 document.addEventListener('DOMContentLoaded', () => {
+  // Clear any previous dark theme state
+  localStorage.removeItem('vr_theme_preference');
+  document.documentElement.classList.remove('dark');
+
   // Page load fade-in
   document.body.classList.add('page-loaded');
 

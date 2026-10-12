@@ -199,121 +199,25 @@ footer {
   nav.mobile-bottom-navbar a.active-nav-item span {
     color: #FAFAF7 !important;
   }
-
-  nav.mobile-bottom-navbar .theme-toggle-btn {
-    color: #FAFAF7 !important;
-  }
 }
 
 /* ========================================================
-   LIGHT & DARK MODE PALETTES (Luxury Western Aesthetics)
+   HOMEPAGE HEADER IN LIGHT MODE (No Background Color)
    ======================================================== */
-html.dark {
-  color-scheme: dark;
+.home-page header#siteHeader.header-transparent,
+.home-page .header-transparent {
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
-html.dark body {
-  background-color: #120e0e !important;
-  color: #F7F3EE !important;
-}
-
-/* Dark mode for main content cards, white sections, and articles */
-html.dark .bg-white {
-  background-color: #1B1414 !important;
-  color: #F7F3EE !important;
-}
-
-html.dark .bg-brand-linenLight {
-  background-color: #161010 !important;
-  color: #F7F3EE !important;
-}
-
-html.dark .bg-brand-linen {
-  background-color: #271e1e !important;
-}
-
-html.dark .text-brand-dark {
-  color: #FAFAF7 !important;
-}
-
-html.dark .text-gray-600,
-html.dark .text-gray-700,
-html.dark .text-gray-800 {
-  color: #D2CCBC !important;
-}
-
-html.dark .text-gray-500 {
-  color: #A39B8B !important;
-}
-
-html.dark .border-brand-linen,
-html.dark .border-brand-linen\/60,
-html.dark .border-brand-linen\/80,
-html.dark .border-gray-200,
-html.dark .border-gray-300 {
-  border-color: rgba(210, 204, 188, 0.2) !important;
-}
-
-/* Normal desktop header in Dark Mode */
-html.dark .header-transparent {
-  background-color: rgba(22, 16, 16, 0.95) !important;
-  border-bottom: 2px solid #847949 !important; /* Vintage Olive accent border in dark mode */
-}
-
-html.dark .header-transparent .logo-title {
-  color: #FAFAF7 !important;
-}
-
-html.dark .header-transparent .logo-sub {
-  color: #D2CCBC !important;
-}
-
-html.dark .header-transparent nav a {
-  color: #FAFAF7 !important;
-}
-
-html.dark .header-transparent nav a:hover {
-  color: #847949 !important;
-}
-
-html.dark .header-transparent nav a.border-b,
-html.dark .header-transparent nav a[class*="border-b"] {
-  border-bottom-color: #FAFAF7 !important;
-  color: #FAFAF7 !important;
-}
-
-/* Cards & Frames in Dark Mode */
-html.dark .gallery-card,
-html.dark .gallery-item,
-html.dark article,
-html.dark .blog-card {
-  background-color: #1B1414 !important;
-  border-color: #847949 !important; /* Vintage Olive framing in dark mode */
-}
-
-/* Inputs & Form controls in Dark Mode */
-html.dark input,
-html.dark select,
-html.dark textarea {
-  background-color: #1A1313 !important;
-  color: #FAFAF7 !important;
-  border-color: rgba(210, 204, 188, 0.25) !important;
-}
-
-html.dark input:focus,
-html.dark select:focus,
-html.dark textarea:focus {
-  border-color: #847949 !important;
-}
-
-/* Theme Toggle Button Styling */
-.theme-toggle-btn {
-  transition: all 0.3s ease !important;
-  cursor: pointer !important;
-}
-
-.theme-toggle-btn:hover {
-  transform: rotate(15deg) scale(1.08) !important;
+.home-page header#siteHeader + section {
+  margin-top: 0 !important;
 }
 
 /* Text flair & editorial shadows */
