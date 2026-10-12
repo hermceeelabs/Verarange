@@ -153,6 +153,29 @@ footer {
     margin-top: 0 !important;
   }
 
+  /* Main homepage for mobile: header overlays the hero section so the hero background is used */
+  .home-page header#siteHeader.header-transparent {
+    position: relative !important;
+    z-index: 30 !important;
+  }
+
+  .home-page header#siteHeader.header-transparent + section {
+    margin-top: -4rem !important; /* -64px pulls the hero section right behind the mobile header */
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  /* Since the hero section has dark cinematic photography/video, render logo in crisp ivory & linen */
+  .home-page header#siteHeader.header-transparent .logo-title {
+    color: #FAFAF7 !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85) !important;
+  }
+
+  .home-page header#siteHeader.header-transparent .logo-sub {
+    color: #D2CCBC !important;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.85) !important;
+  }
+
   /* Scrolled mobile header: compact, blurred deep maroon bar */
   header#siteHeader.header-scrolled,
   .header-scrolled {
