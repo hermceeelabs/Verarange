@@ -133,14 +133,18 @@ footer {
   box-shadow: 0 -6px 20px rgba(45, 11, 11, 0.15) !important;
 }
 
-/* Mobile Header: Centered logo that blends seamlessly into the background */
+/* Mobile Header (< 768px): Completely clear, transparent, and unblurred before scrolling */
 @media (max-width: 767px) {
+  header#siteHeader.header-transparent,
   .header-transparent {
+    background: transparent !important;
     background-color: transparent !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+    border: none !important;
     border-bottom: none !important;
     box-shadow: none !important;
+    border-radius: 0 !important;
   }
 
   header#siteHeader + section,
@@ -149,6 +153,8 @@ footer {
     margin-top: 0 !important;
   }
 
+  /* Scrolled mobile header: compact, blurred deep maroon bar */
+  header#siteHeader.header-scrolled,
   .header-scrolled {
     background-color: rgba(73, 18, 17, 0.96) !important;
     backdrop-filter: blur(14px) !important;
