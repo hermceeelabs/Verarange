@@ -12,24 +12,18 @@ header#siteHeader {
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
   border-bottom: 2.5px solid #491211 !important; /* Brand Deep Maroon border */
-  border-bottom-left-radius: 24px !important; /* Soft curved corners in normal mode */
-  border-bottom-right-radius: 24px !important;
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 0 !important;
+  border-radius: 0 !important; /* Edge-to-edge flush border eliminates the corner color mismatch */
   box-shadow: 0 4px 20px -4px rgba(73, 18, 17, 0.12) !important;
 }
 
-/* Header when SCROLLED: solid Rich Maroon with Ivory border and curved bottom corners */
+/* Header when SCROLLED: solid Rich Maroon with Ivory border */
 .header-scrolled {
   background-color: rgba(73, 18, 17, 0.98) !important; /* Solid Rich Maroon */
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
   border-bottom: 2px solid rgba(250, 250, 247, 0.9) !important;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.35) !important;
-  border-bottom-left-radius: 24px !important;
-  border-bottom-right-radius: 24px !important;
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 0 !important;
+  border-radius: 0 !important;
 }
 
 /* Scrolled contrast states: works on ALL pages regardless of ID */
