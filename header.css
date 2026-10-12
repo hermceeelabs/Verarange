@@ -133,7 +133,7 @@ footer {
   box-shadow: 0 -6px 20px rgba(45, 11, 11, 0.15) !important;
 }
 
-/* Mobile Header (< 768px): Completely clear, transparent, and unblurred before scrolling */
+/* Mobile Header (< 768px): Unified brand mark across all pages */
 @media (max-width: 767px) {
   header#siteHeader.header-transparent,
   .header-transparent {
@@ -165,15 +165,155 @@ footer {
     border-bottom-right-radius: 16px !important;
   }
 
-  /* On home page with dark cinematic video hero, ensure centered logo is luminous */
-  .home-page .header-transparent .logo-title {
+  /* Hide traditional desktop footer on mobile screens (the floating bottom navbar handles navigation) */
+  footer {
+    display: none !important;
+  }
+
+  /* FLOATING MOBILE BOTTOM NAVBAR: Rounded corners with Rich Maroon styling */
+  nav.mobile-bottom-navbar {
+    bottom: 12px !important;
+    left: 12px !important;
+    right: 12px !important;
+    border-radius: 24px !important;
+    background-color: rgba(73, 18, 17, 0.95) !important; /* Signature Rich Maroon */
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1.5px solid rgba(250, 250, 247, 0.25) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45) !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+
+  nav.mobile-bottom-navbar a {
+    color: rgba(250, 250, 247, 0.7) !important;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  nav.mobile-bottom-navbar a.active-nav-item,
+  nav.mobile-bottom-navbar a:hover {
+    color: #FAFAF7 !important; /* Luminous Ivory */
+    font-weight: 700 !important;
+  }
+
+  nav.mobile-bottom-navbar a.active-nav-item span {
     color: #FAFAF7 !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
   }
-  .home-page .header-transparent .logo-sub {
-    color: #D2CCBC !important;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7) !important;
+
+  nav.mobile-bottom-navbar .theme-toggle-btn {
+    color: #FAFAF7 !important;
   }
+}
+
+/* ========================================================
+   LIGHT & DARK MODE PALETTES (Luxury Western Aesthetics)
+   ======================================================== */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #120e0e !important;
+  color: #F7F3EE !important;
+}
+
+/* Dark mode for main content cards, white sections, and articles */
+html.dark .bg-white {
+  background-color: #1B1414 !important;
+  color: #F7F3EE !important;
+}
+
+html.dark .bg-brand-linenLight {
+  background-color: #161010 !important;
+  color: #F7F3EE !important;
+}
+
+html.dark .bg-brand-linen {
+  background-color: #271e1e !important;
+}
+
+html.dark .text-brand-dark {
+  color: #FAFAF7 !important;
+}
+
+html.dark .text-gray-600,
+html.dark .text-gray-700,
+html.dark .text-gray-800 {
+  color: #D2CCBC !important;
+}
+
+html.dark .text-gray-500 {
+  color: #A39B8B !important;
+}
+
+html.dark .border-brand-linen,
+html.dark .border-brand-linen\/60,
+html.dark .border-brand-linen\/80,
+html.dark .border-gray-200,
+html.dark .border-gray-300 {
+  border-color: rgba(210, 204, 188, 0.2) !important;
+}
+
+/* Normal desktop header in Dark Mode */
+html.dark .header-transparent {
+  background-color: rgba(22, 16, 16, 0.95) !important;
+  border-bottom: 2px solid #847949 !important; /* Vintage Olive accent border in dark mode */
+}
+
+html.dark .header-transparent .logo-title {
+  color: #FAFAF7 !important;
+}
+
+html.dark .header-transparent .logo-sub {
+  color: #D2CCBC !important;
+}
+
+html.dark .header-transparent nav a {
+  color: #FAFAF7 !important;
+}
+
+html.dark .header-transparent nav a:hover {
+  color: #847949 !important;
+}
+
+html.dark .header-transparent nav a.border-b,
+html.dark .header-transparent nav a[class*="border-b"] {
+  border-bottom-color: #FAFAF7 !important;
+  color: #FAFAF7 !important;
+}
+
+/* Cards & Frames in Dark Mode */
+html.dark .gallery-card,
+html.dark .gallery-item,
+html.dark article,
+html.dark .blog-card {
+  background-color: #1B1414 !important;
+  border-color: #847949 !important; /* Vintage Olive framing in dark mode */
+}
+
+/* Inputs & Form controls in Dark Mode */
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #1A1313 !important;
+  color: #FAFAF7 !important;
+  border-color: rgba(210, 204, 188, 0.25) !important;
+}
+
+html.dark input:focus,
+html.dark select:focus,
+html.dark textarea:focus {
+  border-color: #847949 !important;
+}
+
+/* Theme Toggle Button Styling */
+.theme-toggle-btn {
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+.theme-toggle-btn:hover {
+  transform: rotate(15deg) scale(1.08) !important;
 }
 
 /* Text flair & editorial shadows */

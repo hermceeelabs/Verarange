@@ -79,6 +79,7 @@
   </style>
   <link rel="stylesheet" href="motion.css">
   <link rel="stylesheet" href="header.css">
+  <script src="theme.js"></script>
 </head>
 
 <body class="home-page bg-brand-linenLight text-brand-dark font-sans antialiased selection:bg-brand-cherry selection:text-white pb-24 md:pb-0">
@@ -106,8 +107,13 @@
         <a href="blog.html" class="text-brand-cherry hover:text-brand-olive transition-colors duration-200">Journal &amp; Stories</a>
       </nav>
 
-      <!-- Desktop CTA Button -->
+      <!-- Desktop CTA & Theme Toggle Controls -->
       <div class="hidden md:flex items-center gap-4">
+        <!-- Light / Dark Mode Toggle Button -->
+        <button class="theme-toggle-btn w-9 h-9 rounded-full flex items-center justify-center border border-brand-cherry/30 text-brand-cherry hover:bg-brand-cherry/10 transition-colors" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
+          <i data-lucide="sun-moon" class="w-4 h-4"></i>
+        </button>
+
         <a href="inquire.html" class="inline-flex items-center justify-center header-cta-btn rounded-full px-6 py-2.5 text-[11px] tracking-widest-plus uppercase font-semibold text-white bg-brand-cherry transition-all duration-300 hover:bg-brand-cherryDark shadow-sm hover:shadow-md">
           Inquire Now
         </a>
@@ -402,32 +408,37 @@
     </a>
   </div>
 
-  <!-- FIXED BOTTOM MOBILE NAVBAR FOR PHONES (All 6 Updated Pages) -->
-  <nav class="fixed bottom-0 left-0 right-0 z-50 bg-brand-linenLight/95 backdrop-blur-md border-t border-brand-linen/80 py-2 px-2 flex md:hidden items-center justify-around text-brand-dark shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
-    <a href="index.html" class="flex flex-col items-center text-brand-cherry font-bold flex-1 py-1">
+  <!-- FLOATING BOTTOM MOBILE NAVBAR: Rounded Maroon Floating Bar with Dark/Light Toggle -->
+  <nav class="fixed z-50 mobile-bottom-navbar flex md:hidden items-center justify-around text-brand-ivory shadow-2xl">
+    <a href="index.html" class="flex flex-col items-center flex-1 py-1 active-nav-item">
       <i data-lucide="home" class="w-4 h-4 mb-0.5"></i>
-      <span class="text-[8.5px] font-semibold tracking-wider uppercase">Home</span>
+      <span class="text-[8.5px] tracking-wider uppercase">Home</span>
     </a>
-    <a href="portfolio.html" class="flex flex-col items-center text-gray-500 hover:text-brand-cherry flex-1 py-1">
+    <a href="portfolio.html" class="flex flex-col items-center flex-1 py-1">
       <i data-lucide="camera" class="w-4 h-4 mb-0.5"></i>
-      <span class="text-[8.5px] font-medium tracking-wider uppercase">Portfolio</span>
+      <span class="text-[8.5px] tracking-wider uppercase">Portfolio</span>
     </a>
-    <a href="about.html" class="flex flex-col items-center text-gray-500 hover:text-brand-cherry flex-1 py-1">
+    <a href="about.html" class="flex flex-col items-center flex-1 py-1">
       <i data-lucide="heart" class="w-4 h-4 mb-0.5"></i>
-      <span class="text-[8.5px] font-medium tracking-wider uppercase">About</span>
+      <span class="text-[8.5px] tracking-wider uppercase">About</span>
     </a>
-    <a href="services.html" class="flex flex-col items-center text-gray-500 hover:text-brand-cherry flex-1 py-1">
+    <a href="services.html" class="flex flex-col items-center flex-1 py-1">
       <i data-lucide="sparkles" class="w-4 h-4 mb-0.5"></i>
-      <span class="text-[8.5px] font-medium tracking-wider uppercase">Services</span>
+      <span class="text-[8.5px] tracking-wider uppercase">Services</span>
     </a>
-    <a href="blog.html" class="flex flex-col items-center text-gray-500 hover:text-brand-cherry flex-1 py-1">
+    <a href="blog.html" class="flex flex-col items-center flex-1 py-1">
       <i data-lucide="book-open" class="w-4 h-4 mb-0.5"></i>
-      <span class="text-[8.5px] font-medium tracking-wider uppercase">Journal</span>
+      <span class="text-[8.5px] tracking-wider uppercase">Journal</span>
     </a>
-    <a href="inquire.html" class="flex flex-col items-center text-gray-500 hover:text-brand-cherry flex-1 py-1">
+    <a href="inquire.html" class="flex flex-col items-center flex-1 py-1">
       <i data-lucide="send" class="w-4 h-4 mb-0.5"></i>
-      <span class="text-[8.5px] font-medium tracking-wider uppercase">Inquire</span>
+      <span class="text-[8.5px] tracking-wider uppercase">Inquire</span>
     </a>
+    <!-- Mobile Theme Toggle -->
+    <button class="theme-toggle-btn flex flex-col items-center flex-1 py-1 text-white/80 hover:text-white" aria-label="Toggle theme" title="Toggle theme">
+      <i data-lucide="sun-moon" class="w-4 h-4 mb-0.5"></i>
+      <span class="text-[8.5px] tracking-wider uppercase theme-label">Theme</span>
+    </button>
   </nav>
 
   <script>
