@@ -81,7 +81,7 @@
   <link rel="stylesheet" href="header.css">
 </head>
 
-<body class="bg-brand-linenLight text-brand-dark font-sans antialiased selection:bg-brand-cherry selection:text-white pb-20 md:pb-0">
+<body class="home-page bg-brand-linenLight text-brand-dark font-sans antialiased selection:bg-brand-cherry selection:text-white pb-24 md:pb-0">
 
   <!-- Top Announcement Bar -->
   <div class="bg-brand-cherry text-brand-linenLight text-[11px] tracking-widest-plus uppercase py-2.5 px-4 text-center font-medium border-b border-brand-cherryDark/30">
@@ -90,10 +90,10 @@
 
   <!-- Header / Navigation (Multi-Page Architecture) -->
   <header id="siteHeader" class="sticky top-0 z-50 transition-all duration-500 header-transparent">
-    <div class="w-full px-6 lg:px-12 h-14 sm:h-16 flex items-center justify-between">
+    <div class="w-full px-6 lg:px-12 h-16 sm:h-20 flex items-center justify-center md:justify-between">
       
-      <!-- Brand Logo / Wordmark -->
-      <a href="index.html" id="brandLogo" class="group flex flex-col items-start transition-colors duration-500">
+      <!-- Brand Logo / Wordmark (Centered on Mobile, Left-Aligned on Desktop) -->
+      <a href="index.html" id="brandLogo" class="group flex flex-col items-center md:items-start text-center md:text-left transition-colors duration-500">
         <span class="font-serif tracking-ultra text-2xl lg:text-3xl text-brand-cherry uppercase font-medium logo-title transition-colors">VERA RANGE</span>
         <span class="font-sans text-[9px] tracking-[0.3em] uppercase text-brand-olive font-semibold -mt-0.5 logo-sub transition-colors">Photography &bull; Est. 2022</span>
       </a>
@@ -112,21 +112,6 @@
           Inquire Now
         </a>
       </div>
-
-      <!-- Mobile Menu Toggle -->
-      <button id="mobileMenuBtn" class="md:hidden text-brand-cherry p-2 focus:outline-none" aria-label="Toggle Navigation">
-        <i data-lucide="menu" class="w-6 h-6"></i>
-      </button>
-    </div>
-
-    <!-- Mobile Drawer -->
-    <div id="mobileMenu" class="hidden md:hidden bg-brand-linenLight border-b border-brand-linen px-6 py-6 space-y-4 text-[13px] tracking-widest uppercase font-medium">
-      <a href="index.html" class="block text-brand-cherry font-semibold">Home</a>
-      <a href="portfolio.html" class="block text-brand-dark hover:text-brand-cherry">Portfolio</a>
-      <a href="about.html" class="block text-brand-dark hover:text-brand-cherry">About</a>
-      <a href="services.html" class="block text-brand-dark hover:text-brand-cherry">Services &amp; Packages</a>
-      <a href="blog.html" class="block text-brand-dark hover:text-brand-cherry">Journal / Blog</a>
-      <a href="inquire.html" class="block text-brand-dark hover:text-brand-cherry">Inquire</a>
     </div>
   </header>
 
@@ -392,7 +377,7 @@
 
 
   <!-- FOOTER: Streamlined Minimal Bar (All Rights Reserved Only) -->
-  <footer class="w-full bg-brand-cherry text-brand-linenLight rounded-t-3xl py-3.5 sm:py-4 px-6 text-center border-t border-white/20">
+  <footer class="w-full bg-brand-cherry text-brand-linenLight rounded-t-3xl py-6 sm:py-7 px-6 text-center border-t border-white/20">
     <div class="max-w-7xl mx-auto text-[11px] sm:text-xs text-brand-linen/80 tracking-widest uppercase font-light">
       <p>&copy; Vera Range Photography. All Rights Reserved.</p>
     </div>
@@ -404,49 +389,54 @@
     <a href="https://wa.me/14175550199?text=Hi%20Miley!%20I'm%20interested%20in%20booking%20a%20photography%20session%20with%20Vera%20Range%20Photography." 
        target="_blank" 
        rel="noopener noreferrer" 
-       class="w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300" 
+       class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300" 
        aria-label="Chat on WhatsApp">
-      <i data-lucide="message-circle" class="w-6 h-6"></i>
+      <i data-lucide="message-circle" class="w-5 h-5 sm:w-6 sm:h-6"></i>
     </a>
 
     <!-- Email Floating Action -->
     <a href="mailto:verarangephotography@gmail.com?subject=Inquiry%20from%20Website" 
-       class="w-12 h-12 rounded-full bg-brand-cherry text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 border border-white/20" 
+       class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-brand-cherry text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 border border-white/20" 
        aria-label="Send Email">
       <i data-lucide="mail" class="w-5 h-5"></i>
     </a>
   </div>
 
-  <!-- FIXED BOTTOM MOBILE NAVBAR FOR PHONES (Requested) -->
-  <nav class="fixed bottom-0 left-0 right-0 z-50 bg-brand-linenLight/95 backdrop-blur-md border-t border-brand-linen/80 py-2.5 px-6 flex md:hidden items-center justify-around text-brand-dark shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
-    <a href="index.html" class="flex flex-col items-center text-brand-cherry">
-      <i data-lucide="home" class="w-5 h-5 mb-0.5"></i>
-      <span class="text-[9px] font-semibold tracking-wider uppercase">Home</span>
+  <!-- FIXED BOTTOM MOBILE NAVBAR FOR PHONES (All 6 Updated Pages) -->
+  <nav class="fixed bottom-0 left-0 right-0 z-50 bg-brand-linenLight/95 backdrop-blur-md border-t border-brand-linen/80 py-2 px-2 flex md:hidden items-center justify-around text-brand-dark shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+    <a href="index.html" class="flex flex-col items-center text-brand-cherry font-bold flex-1 py-1">
+      <i data-lucide="home" class="w-4 h-4 mb-0.5"></i>
+      <span class="text-[8.5px] font-semibold tracking-wider uppercase">Home</span>
     </a>
-    <a href="portfolio.html" class="flex flex-col items-center text-gray-600 hover:text-brand-cherry">
-      <i data-lucide="camera" class="w-5 h-5 mb-0.5"></i>
-      <span class="text-[9px] font-semibold tracking-wider uppercase">Portfolio</span>
+    <a href="portfolio.html" class="flex flex-col items-center text-gray-500 hover:text-brand-cherry flex-1 py-1">
+      <i data-lucide="camera" class="w-4 h-4 mb-0.5"></i>
+      <span class="text-[8.5px] font-medium tracking-wider uppercase">Portfolio</span>
     </a>
-    <a href="services.html" class="flex flex-col items-center text-gray-600 hover:text-brand-cherry">
-      <i data-lucide="sparkles" class="w-5 h-5 mb-0.5"></i>
-      <span class="text-[9px] font-semibold tracking-wider uppercase">Services</span>
+    <a href="about.html" class="flex flex-col items-center text-gray-500 hover:text-brand-cherry flex-1 py-1">
+      <i data-lucide="heart" class="w-4 h-4 mb-0.5"></i>
+      <span class="text-[8.5px] font-medium tracking-wider uppercase">About</span>
     </a>
-    <a href="blog.html" class="flex flex-col items-center text-gray-600 hover:text-brand-cherry">
-      <i data-lucide="book-open" class="w-5 h-5 mb-0.5"></i>
-      <span class="text-[9px] font-semibold tracking-wider uppercase">Journal</span>
+    <a href="services.html" class="flex flex-col items-center text-gray-500 hover:text-brand-cherry flex-1 py-1">
+      <i data-lucide="sparkles" class="w-4 h-4 mb-0.5"></i>
+      <span class="text-[8.5px] font-medium tracking-wider uppercase">Services</span>
     </a>
-    <a href="inquire.html" class="flex flex-col items-center text-gray-600 hover:text-brand-cherry">
-      <i data-lucide="send" class="w-5 h-5 mb-0.5"></i>
-      <span class="text-[9px] font-semibold tracking-wider uppercase">Inquire</span>
+    <a href="blog.html" class="flex flex-col items-center text-gray-500 hover:text-brand-cherry flex-1 py-1">
+      <i data-lucide="book-open" class="w-4 h-4 mb-0.5"></i>
+      <span class="text-[8.5px] font-medium tracking-wider uppercase">Journal</span>
+    </a>
+    <a href="inquire.html" class="flex flex-col items-center text-gray-500 hover:text-brand-cherry flex-1 py-1">
+      <i data-lucide="send" class="w-4 h-4 mb-0.5"></i>
+      <span class="text-[8.5px] font-medium tracking-wider uppercase">Inquire</span>
     </a>
   </nav>
 
   <script>
     lucide.createIcons();
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    const curYear = document.getElementById('currentYear');
+    if (curYear) curYear.textContent = new Date().getFullYear();
     const btn = document.getElementById('mobileMenuBtn');
     const menu = document.getElementById('mobileMenu');
-    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
   </script>
   <script src="motion.js"></script>
 </body>

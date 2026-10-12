@@ -128,9 +128,46 @@ footer {
   border-top-right-radius: 24px !important;
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
-  padding-top: 1.1rem !important;
-  padding-bottom: 1rem !important;
+  padding-top: 1.65rem !important;
+  padding-bottom: 1.65rem !important;
   box-shadow: 0 -6px 20px rgba(45, 11, 11, 0.15) !important;
+}
+
+/* Mobile Header: Centered logo that blends seamlessly into the background */
+@media (max-width: 767px) {
+  .header-transparent {
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+  }
+
+  header#siteHeader + section,
+  header#siteHeader + article,
+  header#siteHeader + main {
+    margin-top: 0 !important;
+  }
+
+  .header-scrolled {
+    background-color: rgba(73, 18, 17, 0.96) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border-bottom: 1.5px solid rgba(250, 250, 247, 0.8) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+    border-bottom-left-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+  }
+
+  /* On home page with dark cinematic video hero, ensure centered logo is luminous */
+  .home-page .header-transparent .logo-title {
+    color: #FAFAF7 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+  }
+  .home-page .header-transparent .logo-sub {
+    color: #D2CCBC !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7) !important;
+  }
 }
 
 /* Text flair & editorial shadows */
