@@ -6,14 +6,26 @@ header#siteHeader {
 }
 
 /* Header in NORMAL MODE (before scrolling):
-   Curved bottom corners and elegant Maroon border */
+   Curved bottom corners with Deep Maroon border */
 .header-transparent {
-  background-color: rgba(250, 250, 247, 0.95) !important; /* Soft Ivory/Linen backdrop */
+  background-color: rgba(250, 250, 247, 0.96) !important; /* Soft Ivory/Linen backdrop */
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
   border-bottom: 2.5px solid #491211 !important; /* Brand Deep Maroon border */
-  border-radius: 0 !important; /* Edge-to-edge flush border eliminates the corner color mismatch */
+  border-bottom-left-radius: 24px !important;
+  border-bottom-right-radius: 24px !important;
   box-shadow: 0 4px 20px -4px rgba(73, 18, 17, 0.12) !important;
+}
+
+/* Seamless Header-to-Body Transition:
+   The section or article immediately following the header extends 24px behind
+   the header so the corner background perfectly matches the body/hero below */
+header#siteHeader + section,
+header#siteHeader + article,
+header#siteHeader + main {
+  margin-top: -24px !important;
+  position: relative !important;
+  z-index: 10 !important;
 }
 
 /* Header when SCROLLED: solid Rich Maroon with Ivory border */
@@ -74,54 +86,18 @@ header#siteHeader {
   color: #360C0B !important;
 }
 
-/* Footer: Signature Deep Maroon (#491211) with Ivory border divider and rounded shoulders */
+/* Footer: Signature Deep Maroon (#491211) Slim Sleek Bar */
 footer {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
   background-color: #491211 !important; /* Signature Deep Maroon */
   color: #F7F3EE !important;
-  border-top: 1.5px solid rgba(250, 250, 247, 0.3) !important;
-  border-top-left-radius: 28px !important;
-  border-top-right-radius: 28px !important;
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-bottom: none !important;
-  box-shadow: 0 -8px 24px rgba(45, 11, 11, 0.18) !important;
-}
-
-footer .footer-brand-title {
-  color: #FAFAF7 !important; /* Ivory white brand title */
-}
-
-footer .footer-sub {
-  color: #D2CCBC !important; /* Warm Linen subtitle */
-}
-
-footer nav a, footer .footer-links a {
-  color: #D2CCBC !important;
-  font-weight: 500 !important;
-  transition: color 0.2s ease !important;
-}
-
-footer nav a:hover, footer .footer-links a:hover {
-  color: #FAFAF7 !important;
-}
-
-footer .footer-copy {
-  color: rgba(210, 204, 188, 0.75) !important;
-}
-
-@media (min-width: 1024px) {
-  footer {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    border-top-left-radius: 32px !important;
-    border-top-right-radius: 32px !important;
-  }
+  border-top: 1px solid rgba(250, 250, 247, 0.25) !important;
+  border-radius: 0 !important;
+  padding-top: 0.85rem !important;
+  padding-bottom: 0.85rem !important;
+  box-shadow: 0 -4px 16px rgba(45, 11, 11, 0.12) !important;
 }
 
 /* Text flair & editorial shadows */
