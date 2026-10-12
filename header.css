@@ -5,23 +5,29 @@ header#siteHeader {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-/* Header when transparent at top */
+/* Header in NORMAL MODE (before scrolling):
+   Curved bottom corners and elegant Maroon border */
 .header-transparent {
-  background-color: transparent !important;
-  background: transparent !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-  border-radius: 0 !important;
+  background-color: rgba(250, 250, 247, 0.95) !important; /* Soft Ivory/Linen backdrop */
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 2.5px solid #491211 !important; /* Brand Deep Maroon border */
+  border-bottom-left-radius: 24px !important; /* Soft curved corners in normal mode */
+  border-bottom-right-radius: 24px !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  box-shadow: 0 4px 20px -4px rgba(73, 18, 17, 0.12) !important;
 }
 
-/* Header when scrolled solid Maroon */
+/* Header when SCROLLED: solid Rich Maroon with Ivory border and curved bottom corners */
 .header-scrolled {
   background-color: rgba(73, 18, 17, 0.98) !important; /* Solid Rich Maroon */
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
   border-bottom: 2px solid rgba(250, 250, 247, 0.9) !important;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.35) !important;
-  border-bottom-left-radius: 20px !important;
-  border-bottom-right-radius: 20px !important;
+  border-bottom-left-radius: 24px !important;
+  border-bottom-right-radius: 24px !important;
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
 }
@@ -74,21 +80,45 @@ header#siteHeader {
   color: #360C0B !important;
 }
 
-/* Footer: Full Width Edge-to-Edge with Rounded Top Corners & Crisp Border */
+/* Footer: Blends seamlessly with main page body (Warm Linen Light #F7F3EE)
+   Uses the same background and border as the page body above it */
 footer {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
-  background-color: #491211 !important; /* Brand Deep Maroon */
-  border-top-left-radius: 28px !important; /* Soft luxury rounded top corners */
+  background-color: #F7F3EE !important; /* Seamless match with page body linen */
+  color: #1B1414 !important;
+  border-top: 1px solid #D2CCBC !important; /* Same border tone as body sections */
+  border-top-left-radius: 28px !important;
   border-top-right-radius: 28px !important;
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
-  border-top: 1.5px solid rgba(250, 250, 247, 0.3) !important;
   border-left: none !important;
   border-right: none !important;
   border-bottom: none !important;
-  box-shadow: 0 -8px 24px rgba(45, 11, 11, 0.18) !important;
+  box-shadow: 0 -4px 20px rgba(73, 18, 17, 0.04) !important;
+}
+
+footer .footer-brand-title {
+  color: #491211 !important; /* Deep Maroon brand title */
+}
+
+footer .footer-sub {
+  color: #847949 !important; /* Vintage Olive subtitle */
+}
+
+footer nav a, footer .footer-links a {
+  color: #491211 !important;
+  font-weight: 500 !important;
+  transition: color 0.2s ease !important;
+}
+
+footer nav a:hover, footer .footer-links a:hover {
+  color: #847949 !important;
+}
+
+footer .footer-copy {
+  color: #4F4E39 !important;
 }
 
 @media (min-width: 1024px) {
